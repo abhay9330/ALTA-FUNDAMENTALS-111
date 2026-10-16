@@ -1,18 +1,19 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 int main()
 {
     int n, m, x;
-    scanf("%d", &n);
+    cin >> n;
     int arr[n];
     for(int i = 0; i < n; i++)
     {
-        scanf("%d", &arr[i]);
+        cin >> arr[i];
     }
-    scanf("%d", &m);
+    cin >> m;
     int arr2[m];
     for(int i = 0; i < m; i++)
     {
-        scanf("%d", &arr2[i]);
+        cin >> arr2[i];
     }
     int i = 0, j = 0, last, first = 1;
     while(i < n || j < m)
@@ -29,7 +30,7 @@ int main()
         }
         if(first || x != last)
         {
-            printf("%d ", x);
+            cout << x << " ";
             last = x;
             first = 0;
         }
